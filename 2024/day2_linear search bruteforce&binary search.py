@@ -17,11 +17,12 @@ end_time = time.perf_counter()
 print("---------------------")
 
 m = 678223072849
-low = 0
-high = m
+
 
 
 def binarySearch(m):
+    low = 0
+    high = m
     while low <= high:
         mid = (low + high) // 2
         if mid ** 2 == m:
@@ -33,7 +34,7 @@ def binarySearch(m):
 
 
 start_time2 = time.perf_counter()
-result = linearSearch(m)
+result = binarySearch(m)
 print(result)
 end_time2 = time.perf_counter()
 
